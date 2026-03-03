@@ -1467,7 +1467,7 @@
     <string name="ambient_display_category_triggers" msgid="1216640141609270011">"Mostrar ao…"</string>
     <string name="doze_title" msgid="1523090408230862316">"Ativar tela para notificações"</string>
     <string name="doze_summary" msgid="8252867381522942804">"Quando a tela está escura, ela é ativada quando chegam notificações"</string>
-    <string name="doze_always_on_title2" msgid="6806855871175589465">"Tela sempre ativada"</string>
+    <string name="doze_always_on_title2" msgid="6806855871175589465">"Tela sempre ativa"</string>
     <string name="doze_always_on_summary" msgid="509097829739647852">"Usa mais bateria"</string>
     <string name="doze_always_on_summary_with_wallpaper" msgid="7193043498368623388">"Mostrar plano de fundo da tela de bloqueio quando a tela estiver desligada"</string>
     <string name="doze_always_on_summary_without_wallpaper" msgid="2461602415293603846">"Ocultar plano de fundo da tela de bloqueio quando a tela estiver desligada"</string>
@@ -3882,7 +3882,7 @@
     <string name="mode_grayscale_summary" msgid="6682099523626777038">"Mude as cores da tela para preto e branco"</string>
     <string name="mode_aod_title" msgid="5903435070341237325">"Manter a tela escura"</string>
     <string name="mode_aod_title_secondary_list" msgid="8268180392811027557">"manter a tela escura"</string>
-    <string name="mode_aod_summary" msgid="7516159044827627065">"Desative o recurso de tela sempre ativada"</string>
+    <string name="mode_aod_summary" msgid="7516159044827627065">"Desative o recurso de tela sempre ativa"</string>
     <string name="mode_wallpaper_title" msgid="5549693923133928374">"Escurecer o plano de fundo"</string>
     <string name="mode_wallpaper_title_secondary_list" msgid="5034602021811580157">"escurecer o plano de fundo"</string>
     <string name="mode_wallpaper_summary" msgid="665480011615603784">"Filtre o brilho do plano de fundo"</string>
