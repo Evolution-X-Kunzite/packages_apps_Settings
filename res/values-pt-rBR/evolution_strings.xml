@@ -276,7 +276,7 @@
     <string name="doze_brightness_force_title">Forçar valores de brilho</string>
     <string name="doze_brightness_force_summary">Usar valores de brilho personalizados em vez do brilho da tela</string>
     <string name="ambient_pulse_brightness_title">Brilho da Tela Ambiente</string>
-    <string name="ambient_doze_brightness_title">Brilho do Always on Display</string>
+    <string name="ambient_doze_brightness_title">Brilho da tela sempre ativa</string>
 
     <!-- Running services - Background processes tab -->
     <string name="background_processes_settings_title">Processos em segundo plano</string>
@@ -406,8 +406,8 @@
     <string name="string_disabled">Desativado</string>
     <string name="always_on_display_schedule_sunset">Pôr do sol</string>
     <string name="always_on_display_schedule_sunrise">Nascer do sol</string>
-    <string name="always_on_display_schedule_mixed_sunset">Ativa do pôr do sol até um horário específico</string>
-    <string name="always_on_display_schedule_mixed_sunrise">Ativa de um horário específico até o nascer do sol</string>
+    <string name="always_on_display_schedule_mixed_sunset">Ativa do pôr do sol até determinado horário</string>
+    <string name="always_on_display_schedule_mixed_sunrise">Ativa de determinado horário até o nascer do sol</string>
 
     <!-- Title for the Bluetooth device details preference that chooses which audio codec a paired device is played with. [CHAR LIMIT=40] -->
     <string name="bluetooth_details_audio_codec_title">Codec de áudio</string>
