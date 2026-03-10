@@ -83,7 +83,13 @@
         <item quantity="one">Até <xliff:g id="device_num">%1$d</xliff:g> dispositivo pode se conectar a este ponto de acesso</item>
     </plurals>
 
-    <!-- Custom auto timeout -->
+    <!-- Wifi/Bluetooth auto timeout -->
+    <string name="wifi_timeout">Tempo limite do Wi-Fi</string>
+    <string name="wifi_timeout_summary">Não desativar o Wi-Fi automaticamente</string>
+    <string name="wifi_timeout_summary_auto">O Wi-Fi será desativado após <xliff:g id="timeout_description">%1$s</xliff:g> se nenhuma rede estiver conectada</string>
+    <string name="bluetooth_timeout">Tempo limite do Bluetooth</string>
+    <string name="bluetooth_timeout_summary">Não desativar o Bluetooth automaticamente</string>
+    <string name="bluetooth_timeout_summary_auto">O Bluetooth será desativado após <xliff:g id="timeout_description">%1$s</xliff:g> se nenhum dispositivo estiver conectado</string>
     <string name="custom_timeout_summary_never">Nunca</string>
     <string name="custom_timeout_summary_5secs">5 segundos</string>
     <string name="custom_timeout_summary_10secs">10 segundos</string>
@@ -321,8 +327,8 @@
     <string name="doze_double_tap_summary">Mostrar notificações com toque duplo</string>
 
     <!-- Doze on charge -->
-    <string name="doze_on_charge_title">Sempre mostrar ao carregar</string>
-    <string name="doze_on_charge_summary">Exibir informações enquanto o dispositivo estiver carregando</string>
+    <string name="doze_on_charge_title">Tela sempre ativa ao carregar</string>
+    <string name="doze_on_charge_summary">Exibir a tela sempre ativa enquanto o dispositivo estiver carregando</string>
 
     <!-- No storage restrict -->
     <string name="no_storage_restrict_title">Sem restrição de armazenamento</string>
@@ -436,8 +442,21 @@
     <string name="model_serial_hidden">Oculto</string>
     <string name="model_serial_hidden_ends_in">Oculto, termina em <xliff:g id="last_four" example="1A2B">%1$s</xliff:g></string>
 
+    <!-- Battery saver dark theme -->
+    <string name="battery_saver_dark_theme_title">Ativar com a Economia de bateria</string>
+    <string name="battery_saver_dark_theme_summary">O tema escuro é ativado e permanece ligado enquanto a Economia de bateria estiver ativa. Economiza mais bateria em telas OLED.</string>
+    <!-- Not shown in the UI; describes the preference for the settings API -->
+    <string name="battery_saver_dark_theme_purpose">Controla se a Economia de bateria ativa o tema escuro e impede alterá-lo até que a Economia de bateria seja desativada.</string>
+
     <!-- Blur Strength -->
     <string name="blur_strength_title">Intensidade do desfoque</string>
     <string name="blur_status_on_pct">Ativado (%1$d%%)</string>
     <string name="blur_status_off">Desativado</string>
+    
+    <!-- Wifi Privacy -->
+    <string-array name="wifi_privacy_entries_ext">
+        <item>Usar MAC aleatório por conexão (padrão)</item>
+        <item>Usar MAC aleatório por rede</item>
+        <item>Usar MAC do dispositivo</item>
+    </string-array>
 </resources>
