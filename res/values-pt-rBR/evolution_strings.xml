@@ -321,8 +321,8 @@
     <string name="doze_double_tap_summary">Mostrar notificações com toque duplo</string>
 
     <!-- Doze on charge -->
-    <string name="doze_on_charge_title">Sempre mostrar ao carregar</string>
-    <string name="doze_on_charge_summary">Exibir informações enquanto o dispositivo estiver carregando</string>
+    <string name="doze_on_charge_title">Tela sempre ativa ao carregar</string>
+    <string name="doze_on_charge_summary">Exibir a tela sempre ativa enquanto o dispositivo estiver carregando</string>
 
     <!-- No storage restrict -->
     <string name="no_storage_restrict_title">Sem restrição de armazenamento</string>
@@ -440,4 +440,11 @@
     <string name="blur_strength_title">Intensidade do desfoque</string>
     <string name="blur_status_on_pct">Ativado (%1$d%%)</string>
     <string name="blur_status_off">Desativado</string>
+    
+    <!-- Wifi Privacy -->
+    <string-array name="wifi_privacy_entries_ext">
+        <item>Usar MAC aleatório por conexão (padrão)</item>
+        <item>Usar MAC aleatório por rede</item>
+        <item>Usar MAC do dispositivo</item>
+    </string-array>
 </resources>
