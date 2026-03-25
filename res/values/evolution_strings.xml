@@ -389,4 +389,9 @@
     <string name="app_lock_credential_incorrect">Incorrect PIN, Password, or Pattern.</string>
     <string name="app_lock_biometrics_title">Allow Biometrics</string>
     <string name="app_lock_biometrics_summary">Unlock locked apps using fingerprint or face unlock when custom lock is enabled</string>
+
+    <!-- Blur Strength -->
+    <string name="blur_strength_title">Blur Strength</string>
+    <string name="blur_status_on_pct">On (%1$d%%)</string>
+    <string name="blur_status_off">Off</string>
 </resources>
