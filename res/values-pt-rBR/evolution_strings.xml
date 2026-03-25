@@ -389,4 +389,9 @@
     <string name="app_lock_credential_incorrect">PIN, Senha ou Padrão incorreto.</string>
     <string name="app_lock_biometrics_title">Permitir biometria</string>
     <string name="app_lock_biometrics_summary">Desbloquear aplicativos protegidos usando impressão digital ou reconhecimento facial quando o bloqueio personalizado estiver ativo</string>
+
+    <!-- Blur Strength -->
+    <string name="blur_strength_title">Intensidade do desfoque</string>
+    <string name="blur_status_on_pct">Ativado (%1$d%%)</string>
+    <string name="blur_status_off">Desativado</string>
 </resources>
