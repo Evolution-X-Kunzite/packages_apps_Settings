@@ -123,6 +123,12 @@ class BlurSettings : Fragment() {
             )
         }
 
+        val blurStatusSummary = if (blursEnabled) {
+            stringResource(R.string.blur_status_on_pct, blurRadiusPct.roundToInt())
+        } else {
+            stringResource(R.string.blur_status_off)
+        }
+
         Scaffold(
             containerColor = MaterialTheme.colorScheme.surfaceContainer,
         ) { paddingValues ->
@@ -141,6 +147,7 @@ class BlurSettings : Fragment() {
                 item {
                     SwitchPreference(
                         title = stringResource(com.android.settingslib.R.string.window_blurs),
+                        summary = blurStatusSummary,
                         checked = blursEnabled,
                         onCheckedChange = { newValue ->
                             blursEnabled = newValue
@@ -152,7 +159,7 @@ class BlurSettings : Fragment() {
 
                 item {
                     SliderPreference(
-                        title = "Blur Strength",
+                        title = stringResource(R.string.blur_strength_title),
                         summary = "",
                         value = blurRadiusPct,
                         onValueChange = { 
