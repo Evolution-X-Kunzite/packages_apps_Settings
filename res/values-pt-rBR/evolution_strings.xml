@@ -389,4 +389,55 @@
     <string name="app_lock_credential_incorrect">PIN, Senha ou Padrão incorreto.</string>
     <string name="app_lock_biometrics_title">Permitir biometria</string>
     <string name="app_lock_biometrics_summary">Desbloquear aplicativos protegidos usando impressão digital ou reconhecimento facial quando o bloqueio personalizado estiver ativo</string>
+
+    <!-- Show clipboard overlay -->
+    <string name="show_clipboard_overlay_title">Mostrar sobreposição da área de transferência</string>
+    <string name="show_clipboard_overlay_summary">Mostrar uma sobreposição no canto inferior esquerdo da tela quando algo for copiado para a área de transferência</string>
+
+    <!-- Radio Info -->
+    <string name="radio_info_title">Informações de rádio</string>
+
+    <!-- Override Mock Location restriction -->
+    <string name="override_mock_location_title">Ocultar restrição de localização fictícia</string>
+    <string name="override_mock_location_summary">Quando ativado, os aplicativos não conseguem detectar localizações fictícias</string>
+
+    <!-- AOD Schedule -->
+    <string name="always_on_display_schedule_title">Programação da tela sempre ativa</string>
+    <string name="string_disabled">Desativado</string>
+    <string name="always_on_display_schedule_sunset">Pôr do sol</string>
+    <string name="always_on_display_schedule_sunrise">Nascer do sol</string>
+    <string name="always_on_display_schedule_mixed_sunset">Ativa do pôr do sol até um horário específico</string>
+    <string name="always_on_display_schedule_mixed_sunrise">Ativa de um horário específico até o nascer do sol</string>
+
+    <!-- Title for the Bluetooth device details preference that chooses which audio codec a paired device is played with. [CHAR LIMIT=40] -->
+    <string name="bluetooth_details_audio_codec_title">Codec de áudio</string>
+    
+    <!-- Summary shown when the audio codec of a paired device cannot be read or chosen. [CHAR LIMIT=40] -->
+    <string name="bluetooth_details_audio_codec_unavailable">Não disponível</string>
+
+    <!-- Clipboard auto clear -->
+    <string name="clipboard_auto_clear_timeout_title">Tempo limite para limpar área de transferência</string>
+    <string name="clipboard_auto_clear_title">Limpar área de transferência automaticamente</string>
+    <string name="clipboard_auto_clear_summary">Limpar automaticamente a área de transferência no horário programado</string>
+    <string name="clipboard_auto_clear_enabled_title">Usar limpeza automática da área de transferência</string>
+    <string name="clipboard_auto_clear_timeout_disable_clipboard">Desativar área de transferência</string>
+
+    <!-- Cycle through ringer modes gesture -->
+    <string name="prevent_ringing_option_cycle">Alternar entre modos</string>
+    <string name="prevent_ringing_option_cycle_summary">Ativado (alternar entre modos)</string>
+
+    <!-- Label for a numbered SIM card.  [CHAR LIMIT=40] -->
+    <string name="sim_card_number_title" translatable="false">SIM <xliff:g id="card_number">%1$d</xliff:g></string>
+
+    <!-- Model page -->
+    <string name="hardware_codename">Nome de código</string>
+    <string name="build_type_official">Compilação oficial</string>
+    <string name="build_type_unofficial">Compilação não oficial</string>
+    <string name="model_serial_hidden">Oculto</string>
+    <string name="model_serial_hidden_ends_in">Oculto, termina em <xliff:g id="last_four" example="1A2B">%1$s</xliff:g></string>
+
+    <!-- Blur Strength -->
+    <string name="blur_strength_title">Intensidade do desfoque</string>
+    <string name="blur_status_on_pct">Ativado (%1$d%%)</string>
+    <string name="blur_status_off">Desativado</string>
 </resources>
