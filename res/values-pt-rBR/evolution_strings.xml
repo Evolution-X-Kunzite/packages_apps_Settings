@@ -10,8 +10,6 @@
     <!-- Android version screen, build maintainer -->
     <string name="build_maintainer_label">Mantido por</string>
     <string name="build_maintainer">Mantenedor da compilação</string>
-    <string name="build_maintainer_summary" translatable="false">Unknown</string>
-    <string name="build_maintainer_donate_url" translatable="false">https://linktr.ee/joeyhuab</string>
     <string name="maintainer_link_github">Perfil do GitHub</string>
     <string name="maintainer_link_donate">Doar</string>
     <string name="device_name">Dispositivo</string>
