@@ -190,8 +190,15 @@ public class ModelPageController extends BasePreferenceController {
     }
 
     private boolean isOfficialBuild() {
-        return "Official".equalsIgnoreCase(
-                SystemProperties.get("ro.evolution.build.type", ""));
+        return "Official".equalsIgnoreCase(getBuildType());
+    }
+
+    private boolean isCommunityBuild() {
+        return "Community".equalsIgnoreCase(getBuildType());
+    }
+
+    private String getBuildType() {
+        return SystemProperties.get("ro.evolution.build.type", "").trim();
     }
 
     // -------------------------------------------------------------------------
@@ -598,14 +605,24 @@ public class ModelPageController extends BasePreferenceController {
         }
     }
 
-    /** Hero corner chip: check icon only for Official builds. */
+    /** Hero corner chip: check icon for Official, people icon for Community, none otherwise. */
     private void bindStatusPill(LayoutPreference pref) {
         TextView pill = pref.findViewById(R.id.model_status_pill);
         if (pill == null) return;
-        final boolean official = isOfficialBuild();
-        pill.setText(official ? R.string.build_type_official : R.string.build_type_unofficial);
-        pill.setCompoundDrawablesRelativeWithIntrinsicBounds(
-                official ? R.drawable.ic_model_status_check : 0, 0, 0, 0);
+        final int textRes;
+        final int iconRes;
+        if (isOfficialBuild()) {
+            textRes = R.string.build_type_official;
+            iconRes = R.drawable.ic_model_status_check;
+        } else if (isCommunityBuild()) {
+            textRes = R.string.build_type_community;
+            iconRes = R.drawable.ic_model_status_check;
+        } else {
+            textRes = R.string.build_type_unofficial;
+            iconRes = 0;
+        }
+        pill.setText(textRes);
+        pill.setCompoundDrawablesRelativeWithIntrinsicBounds(iconRes, 0, 0, 0);
         pill.setVisibility(View.VISIBLE);
     }
 
@@ -1131,6 +1148,7 @@ public class ModelPageController extends BasePreferenceController {
      */
     private void showOverlayMaintainerFallback(LayoutPreference layoutPref) {
         String summary = UrlUtils.trimToEmpty(mContext.getString(R.string.build_maintainer_summary));
+        Log.d(TAG, "overlay maintainer='" + summary + "' official=" + isOfficialBuild());
         if (summary.isEmpty() || summary.equalsIgnoreCase("Unknown")) return;
 
         String donateUrl = UrlUtils.trimToEmpty(
@@ -1246,11 +1264,23 @@ public class ModelPageController extends BasePreferenceController {
         } else {
             if (badgeView != null) badgeView.setVisibility(View.GONE);
             final String donateUrl = UrlUtils.sanitizeUrl(overlayDonateUrl);
-            setupMaintainerActions(card, support, null, donateUrl);
+            final String github = getOverlayGithubUser();
+            setupMaintainerActions(card, support,
+                    github == null ? null : "https://github.com/" + github, donateUrl);
+            if (github != null && avatarView != null) {
+                loadGithubAvatar(layoutPref, github);
+            }
         }
 
         card.setVisibility(View.VISIBLE);
         fadeIn(card, true);
+    }
+
+    /** GitHub username from the build_maintainer_github overlay; null if unset or invalid. */
+    private String getOverlayGithubUser() {
+        final String user = UrlUtils.trimToEmpty(
+                mContext.getString(R.string.build_maintainer_github));
+        return user.matches("[A-Za-z0-9][A-Za-z0-9-]{0,38}") ? user : null;
     }
 
     private void loadGithubAvatar(LayoutPreference layoutPref, String username) {
