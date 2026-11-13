@@ -12,6 +12,7 @@
     <string name="build_maintainer">Mantenedor da compilação</string>
     <string name="maintainer_link_github">Perfil do GitHub</string>
     <string name="maintainer_link_donate">Doar</string>
+    <string name="maintainer_support">Suporte</string>
     <string name="device_name">Dispositivo</string>
 
     <!-- Hardware info -->
