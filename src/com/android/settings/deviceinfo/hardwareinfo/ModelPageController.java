@@ -119,6 +119,8 @@ public class ModelPageController extends BasePreferenceController {
             "https://raw.githubusercontent.com/LineageOS/lineage_wiki/main/images/devices/%s";
     private static final String LINEAGE_DEVICE_YML_URL =
             "https://raw.githubusercontent.com/LineageOS/lineage_wiki/main/_data/devices/%s.yml";
+    private static final String CUSTOM_IMAGE_URL =
+            "https://kleidione.github.io/evolution/devices/%s.webp";
     private static final String WIKIPEDIA_SUMMARY_URL =
             "https://en.wikipedia.org/api/rest_v1/page/summary/%s";
     private static final String WIKIPEDIA_SEARCH_URL =
@@ -296,12 +298,22 @@ public class ModelPageController extends BasePreferenceController {
         mExecutor.execute(() -> {
             mImageNetworkError = false;
             Bitmap bmp = null;
-            final String lineageUrl = resolveLineageImageUrl(codename, oem);
-            if (lineageUrl != null) bmp = NetworkUtils.fetchBitmap(lineageUrl);
+            
+            // Custom device image URL template
+            bmp = NetworkUtils.fetchBitmap(String.format(CUSTOM_IMAGE_URL, codename));
+
+            // LineageOS wiki
+            if (bmp == null && !mDestroyed) {
+                final String lineageUrl = resolveLineageImageUrl(codename, oem);
+                if (lineageUrl != null) bmp = NetworkUtils.fetchBitmap(lineageUrl);
+            }
+            // Evolution-X gitres
             if (bmp == null && !mDestroyed) {
                 bmp = NetworkUtils.fetchBitmap(String.format(EVO_IMAGE_URL, codename));
             }
+            // Wikipedia
             if (bmp == null && !mDestroyed) bmp = fetchWikipediaImage(oem);
+
             final Bitmap result = bmp;
             mMainHandler.post(() -> {
                 if (mDestroyed) return;
